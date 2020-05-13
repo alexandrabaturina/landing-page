@@ -55,6 +55,7 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     display: flex;
+    flex-direction: column;
     padding-left: 0;
     margin: 0;
     text-align: right;
@@ -110,6 +111,10 @@ section {
     .landing__container {
         max-width: 50em;
         padding: 4em;
+    }
+
+    .navbar__menu ul {
+        flex-direction: row;
     }
 }
 
