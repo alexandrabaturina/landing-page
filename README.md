@@ -5,7 +5,7 @@ The goal of the project is to build a multi-section landing page with dynamicall
 
 **Landing Page** meets the following requirements.
 * Navigation bar is build dynamically as an unordered list.
-* Anchor links to the sections of the page have smooth scrolling effect.
+* Links to the sections of the page have smooth scrolling effect.
 * The section in the viewport is visually distinguished from the other sections.
 * Files are organized with a structure that separates files based on functionality. The project structure is shown below.
 ```sh
@@ -16,7 +16,8 @@ The goal of the project is to build a multi-section landing page with dynamicall
       app.js
   README.md
 ```
-
+## Running
+To run the project page, open ```index.html``` in your browser.
 
 ## Authors
 Alexandra Baturina
