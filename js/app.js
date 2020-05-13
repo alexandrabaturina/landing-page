@@ -10,17 +10,11 @@
 
 
 /* Define global variables */
-
 const allSections = document.querySelectorAll('section');
 const navbar = document.getElementById('navbar__list');
 
-/*
- * End Global Variables
- * Start Helper Functions
-*/
 
-// Define function to dinamically build the nav menu
-
+/* Define function to dinamically build the nav menu and add scrolling*/
 function buildNavMenu() {
     for (let i = 0; i < allSections.length; i++) {
         let sectionId = allSections[i].querySelector('h2').textContent;
@@ -34,6 +28,8 @@ function buildNavMenu() {
     }
 }
 
+
+/* Define function to define whether or not an element is in viewport */
 function isInViewport(elem) {
     const box = elem.getBoundingClientRect();
     return (box.top >= -300 && box.left >= 0 &&
@@ -42,14 +38,12 @@ function isInViewport(elem) {
     );
 }
 
-window.addEventListener('scroll', () => {
-    makeActive();
-})
+
+/* Define function to give active states for sections and nav links */
 
 function makeActive() {
     const menuLinks = document.querySelectorAll(".menu__link");
     if (menuLinks.length === allSections.length) {
-
         for (let i = 0; i < allSections.length; i++) {
             if (isInViewport(allSections[i])) {
                 console.log(i + 1);
@@ -64,17 +58,10 @@ function makeActive() {
     }
 }
 
-
-
-// Build nav menu
+/* Build nav menu */
 buildNavMenu();
 
-// Scroll to section on link click
-
-
-// Make sections active
-
-// Scroll to anchor ID using scrollTO event
-
-// Set sections as active
-
+/* Add scroll listener */
+window.addEventListener('scroll', () => {
+    makeActive();
+})
