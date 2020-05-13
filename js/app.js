@@ -42,6 +42,30 @@ function isInViewport(elem) {
     );
 }
 
+window.addEventListener('scroll', () => {
+    makeActive();
+})
+
+function makeActive() {
+    const menuLinks = document.querySelectorAll(".menu__link");
+    if (menuLinks.length === allSections.length) {
+
+        for (let i = 0; i < allSections.length; i++) {
+            if (isInViewport(allSections[i])) {
+                console.log(i + 1);
+                allSections[i].classList.add('your-active-class');
+                menuLinks[i].classList.add('active');
+            } else {
+                allSections[i].classList.remove('your-active-class');
+                menuLinks[i].classList.remove('active');
+            }
+
+        }
+    }
+}
+
+
+
 // Build nav menu
 buildNavMenu();
 

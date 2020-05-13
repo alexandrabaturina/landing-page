@@ -79,9 +79,14 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar__menu .active {
+    color: #fff;
+    background-color: #333;
+}
+
 /* Header Styles */
 .page__header {
-    background: #fff;
+    background: #cc1;
     position: fixed;
     top: 0;
     width: 100%;
