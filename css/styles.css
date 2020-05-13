@@ -54,8 +54,8 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 110px);
     padding-left: 0;
     margin: 0;
     text-align: right;
