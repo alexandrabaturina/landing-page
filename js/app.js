@@ -34,6 +34,13 @@ function buildNavMenu() {
     }
 }
 
+function isInViewport(elem) {
+    const box = elem.getBoundingClientRect();
+    return (box.top >= -300 && box.left >= 0 &&
+        box.bottom <= (window.innerHeight + 300 || elem.clientHeight + 300) &&
+        box.right <= (window.innerWidth || elem.clientWidth)
+    );
+}
 
 // Build nav menu
 buildNavMenu();
