@@ -23,7 +23,7 @@ function buildNavMenu() {
         li.className = 'menu__link';
         navbar.appendChild(li);
         li.addEventListener('click', function (event) {
-            allSections[i].scrollIntoView({ behavior: 'smooth' });
+            allSections[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
         })
     }
 }
